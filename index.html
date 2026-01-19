@@ -258,13 +258,13 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: #00FF00;
-            box-shadow: 0 0 10px #00FF00;
+            background: var(--glow-opacity);
+            box-shadow: 0 0 10px var(--glow-opacity);
             animation: statusPulse 2s infinite;
         }
         
         .status-text {
-            color: rgba(255, 215, 0, 0.7);
+            color: var(--glow-opacity);
             font-size: 1.1em;
             text-shadow: 0 0 5px var(--glow-opacity);
         }
@@ -338,8 +338,8 @@
                 transparent 70%);
             border-radius: 50%;
             box-shadow: 0 0 30px var(--gold-glow),
-                        0 0 50px rgba(255, 215, 0, 0.5),
-                        0 0 70px rgba(255, 215, 0, 0.3);
+                        0 0 50px var(--glow-opacity),
+                        0 0 70px var(--glow-opacity);
             animation: corePulse 2s infinite alternate;
         }
         
@@ -579,7 +579,7 @@
             
             // تأثير على النصوص
             document.querySelector('.avatar-title').style.textShadow = 
-                '0 0 15px rgba(255, 215, 0, 0.9), 0 0 25px rgba(255, 215, 0, 0.5)';
+                '0 0 15px var(--glow-opacity), 0 0 25px var(--glow-opacity)';
         });
         
         avatarContainer.addEventListener('mouseleave', function() {
@@ -596,11 +596,11 @@
             
             // استعادة الظل
             document.querySelector('.card1').style.boxShadow = 
-                '0 0 15px rgba(255, 215, 0, 0.3)';
+                '0 0 15px var(--glow-opacity)';
             
             // استعادة النصوص
             document.querySelector('.avatar-title').style.textShadow = 
-                '0 0 10px rgba(255, 215, 0, 0.7)';
+                '0 0 10px var(--glow-opacity)';
         });
         
         // عند النقر على الأفاتار
@@ -657,15 +657,15 @@
                 right: 50%;
                 transform: translate(50%, -50%);
                 background: rgba(0, 0, 0, 0.9);
-                color: #FFD700;
+                color: var(--gold-glow);
                 padding: 10px 20px;
                 border-radius: 25px;
-                border: 2px solid #FFD700;
+                border: 2px solid var(--gold-glow);
                 font-size: 1em;
                 white-space: nowrap;
                 z-index: 100;
                 animation: bubblePop 2s ease forwards;
-                box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+                box-shadow: 0 5px 20px var(--glow-opacity);
             `;
             
             avatarContainer.appendChild(messageBubble);
