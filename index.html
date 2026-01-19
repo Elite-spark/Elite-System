@@ -211,7 +211,7 @@
             height: 200%;
             background: radial-gradient(circle, 
                 transparent 30%,
-                rgba(255, 215, 0, 0.3) 40%,
+                var(--glow-opacity) 40%,
                 transparent 50%);
             top: 50%;
             right: 50%;
@@ -274,7 +274,7 @@
             width: 130px;
             height: 130px;
             border-radius: 50%;
-            border: 2px dashed rgba(255, 215, 0, 0.4);
+            border: 2px dashed var(--glow-opacity);
             animation: haloRotate 20s linear infinite;
         }
         
