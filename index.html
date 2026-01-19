@@ -579,15 +579,17 @@
         avatarContainer.addEventListener('mouseenter', function() {
             // تسريع الدوران
             loops.forEach(loop => {
-                loop.style.animationDuration = '2s';
+                loop.style.animationDuration = '4s';
             });
             
             // تسريع دوران الهالة
-            halo.style.animationDuration = '10s';
+            halo.style.animationDuration = '20s';
             
             // تكبير النواة
-            core.style.transform = 'translate(50%, -50%) scale(1.5)';
-            
+            core.style.transform = 'translate(50%, -50%) scale(1)';
+            // استعادة الظل
+            document.querySelector('.card1').style.boxShadow = 
+                '0 0 15px var(--glow-opacity)';
             
             // تأثير على النصوص
             document.querySelector('.avatar-title').style.textShadow = 
@@ -623,16 +625,16 @@
             // موجة طاقة تبدأ من المنتصف
             const wave = document.createElement('div');
             wave.className = 'wave';
-            wave.style.animation = 'waveExpand 1s ease-out';
+            wave.style.animation = 'waveExpand 3s ease-out';
             document.querySelector('.energy-waves').appendChild(wave);
             
             // تأثير على الجسيمات
             const particles = document.querySelectorAll('.particle');
             particles.forEach(particle => {
-                particle.style.animationDuration = '2s';
+                particle.style.animationDuration = '4s';
                 setTimeout(() => {
                     particle.style.animationDuration = '10s';
-                }, 2000);
+                }, 1000);
             });
             
             // إزالة الموجة بعد انتهاء الحركة
