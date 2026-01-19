@@ -258,7 +258,7 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: var(--glow-opacity);
+            background: var(--gold-glow);
             box-shadow: 0 0 10px var(--glow-opacity);
             animation: statusPulse 2s infinite;
         }
@@ -332,8 +332,8 @@
             width: 20px;
             height: 20px;
             background: radial-gradient(circle, 
-                #FFD700 0%,
-                #FFEC8B 30%,
+                var(--gold-glow) 0%,
+                var(--glow-opacity) 30%,
                 #FFF8DC 50%,
                 transparent 70%);
             border-radius: 50%;
@@ -420,6 +420,11 @@
          @keyframes haloRotate {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+
+        @keyframes statusPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         @keyframes waveExpand {
